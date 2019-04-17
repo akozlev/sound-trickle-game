@@ -1,14 +1,34 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 
 public class TestSendToReceiver : MonoBehaviour
 {
     public LibPdInstance pdPatch;
-    public float num;
+    public AudioClip sound;
 
-    public void Test() 
+    public void StartBang() 
     {
-        pdPatch.SendFloat("variable", num);
+        pdPatch.SendBang("start");
     }
+    public void LoopBang()
+    {
+        pdPatch.SendBang("loop");
+    }
+    public void StopBang()
+    {
+        pdPatch.SendBang("stop");
+    }
+    public void PauseBang()
+    {
+        pdPatch.SendBang("pause");
+    }
+    public void LoadBang()
+    {
+        Debug.Log(sound.name);
+        string path = "../../Sounds/" + sound.name + ".wav";
+        pdPatch.SendSymbol("path", path);
+    }
+
 }
