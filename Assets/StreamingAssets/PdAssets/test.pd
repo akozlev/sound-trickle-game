@@ -1,0 +1,24 @@
+#N canvas 656 252 627 540 10;
+#X obj 89 50 r bang;
+#X obj 161 50 r float;
+#X obj 335 54 r message;
+#X obj 85 183 s bang;
+#X obj 153 179 s float;
+#X obj 344 176 s message;
+#X obj 86 103 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 149 133 3.5;
+#X msg 232 136 something;
+#X obj 246 51 r symbol;
+#X obj 236 180 s symbol;
+#X obj 215 92 print;
+#X connect 0 0 6 0;
+#X connect 0 0 11 0;
+#X connect 1 0 11 0;
+#X connect 2 0 11 0;
+#X connect 6 0 3 0;
+#X connect 6 0 7 0;
+#X connect 6 0 8 0;
+#X connect 7 0 4 0;
+#X connect 8 0 10 0;
+#X connect 9 0 11 0;

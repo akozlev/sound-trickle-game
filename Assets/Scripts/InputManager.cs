@@ -31,8 +31,9 @@ public class InputManager : MonoBehaviour
         triangleAvailable = !triangle.activeSelf;
         squareAvailable = !square.activeSelf;
     }
+
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         
         if ( Input.GetAxisRaw("J1Horizontal") == 1 || Input.GetAxisRaw("P1Horizontal") == 1 )
